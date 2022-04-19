@@ -27,11 +27,13 @@
                 @csrf
                 <h1 class="h3 mt-4 mb-3 font-weight-normal">Please sign in</h1>
                 <input type="email" name="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" placeholder="Email address" required autofocus>
+              
                 @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
+
                 <input type="password" name="password" id="inputPassword" class="form-control" style="margin-top:10px" placeholder="Password" required>
                 <button type="submit" class="btn btn-primary" style="margin-top:20px">Sign in</button>
           
