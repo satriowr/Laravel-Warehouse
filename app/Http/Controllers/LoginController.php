@@ -24,5 +24,7 @@ class LoginController extends Controller
             dd("Successfully logged in!");
             //return redirect()->intended('/dashboard');
         }
+
+        return back()->with('loginError', 'Login Failed');
     }
 }
