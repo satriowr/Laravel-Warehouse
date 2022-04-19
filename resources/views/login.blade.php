@@ -27,7 +27,7 @@
                 @csrf
                 <h1 class="h3 mt-4 mb-3 font-weight-normal">Please sign in</h1>
                 <input type="email" name="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" placeholder="Email address" required autofocus>
-              
+
                 @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -38,7 +38,7 @@
                 <button type="submit" class="btn btn-primary" style="margin-top:20px">Sign in</button>
           
                 <p class="mt-5 mb-3 text-muted">
-                    Smart Warehouse
+                    Smart Warehouse &copy; 2022
                 </p>
             </form>
         </div>
