@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +16,11 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-route::get('/login', [LoginController::class, 'index']);
+
+route::get('/login', [LoginController::class, 'index'])->name("login")->middleware('guest');
 route::post('/login', [LoginController::class, 'auth']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
+route::get('/', [DashboardController::class, 'index'])->middleware('auth');
+route::get('/logout', [LoginController::class, 'logout']);
 
