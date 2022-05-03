@@ -28,3 +28,5 @@ Route::get('/kib-a/more/{id}', [kib_A_Controller::class, 'more'])->middleware('a
 Route::get('/kib-a/delete/{id}', [kib_A_Controller::class, 'delete'])->middleware('auth');
 route::get('/kib-a/insert', [kib_A_Controller::class, 'insert'])->middleware('auth');
 route::post('/kib-a/insert', [kib_A_Controller::class, 'store'])->middleware('auth');
+route::get('/kib-a/edit/{id}', [kib_A_Controller::class, 'edit'])->middleware('auth');
+route::post('/kib-a/edit/{id}', [kib_A_Controller::class, 'update'])->middleware('auth');
