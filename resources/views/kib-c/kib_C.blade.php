@@ -130,7 +130,7 @@
                         </td>
                         <td>{{ $a->nama_aset }}</td>
                         <td>{{ $a->kode_aset }}</td>
-                        <td>{{ $a->Kondisi }}</td>
+                        <td>{{ $a->kondisi }}</td>
                         <td>{{ $a->lokasi }}</td>
                         <td>{{ $a->harga }}</td>
                         <td>

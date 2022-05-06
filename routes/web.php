@@ -42,3 +42,9 @@ route::get('/kib-b/edit/{id}', [kib_B_Controller::class, 'edit'])->middleware('a
 route::post('/kib-b/edit/{id}', [kib_B_Controller::class, 'update'])->middleware('auth');
 
 route::get('/kib-c', [kib_C_Controller::class, 'index'])->middleware('auth');
+route::get('/kib-c/insert', [kib_C_Controller::class, 'insert'])->middleware('auth');
+route::post('/kib-c/insert', [kib_C_Controller::class, 'store'])->middleware('auth');
+route::get('/kib-c/delete/{id}', [kib_C_Controller::class, 'delete'])->middleware('auth');
+Route::get('/kib-c/more/{id}', [kib_C_Controller::class, 'more'])->middleware('auth');
+route::get('/kib-c/edit/{id}', [kib_C_Controller::class, 'edit'])->middleware('auth');
+route::post('/kib-c/edit/{id}', [kib_C_Controller::class, 'update'])->middleware('auth');
