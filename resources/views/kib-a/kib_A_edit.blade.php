@@ -77,6 +77,8 @@
             </div>
         </div>
         <a class="active" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
+        <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
+        <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
@@ -91,6 +93,9 @@
                 @csrf
                 <div class="section-kedua">
                     <div class="d-flex flex-row justify-content-end container-section gap-3" style="margin-top:32px; border-radius:4px;">
+                        <div class="cancel mt-3">
+                            <a href="/kib-a/more/{{ $a->id }}" class="btn btn-danger">Batalkan</a>
+                        </div>
                         <div class="edit mt-3">
                             <button type="submit" class="btn btn-success">Perbarui Data</button>
                         </div>

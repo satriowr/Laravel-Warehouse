@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KIB-A | Warehouse</title>
+    <title>KIB-B | Warehouse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -76,8 +76,8 @@
                 </div>
             </div>
         </div>
-        <a class="active" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
-        <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
+        <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
+        <a class="active" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
@@ -85,7 +85,7 @@
     <div class="content">
         <div class="main-content" style="margin-top:16px; margin-left:24px; margin-right:24px">
             <div class="section-satu">
-                <h3>KARTU INVENTARIS BARANG (KIB) A</h3>
+                <h3>KARTU INVENTARIS BARANG (KIB) B</h3>
             </div>
             <div class="section-kedua">
                 <div class="d-flex flex-row justify-content-between container-section" style="margin-top:32px; border-radius:4px;">
@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="tambah mt-3">
-                        <a href="/kib-a/insert">
+                        <a href="/kib-b/insert">
                             <button type="button" class="btn btn-success">Tambah Data</button>
                         </a>
                     </div>
@@ -108,12 +108,13 @@
                         <th class="text-center" scope="col" style="width:50px">No</th>
                         <th class="text-center" scope="col" style="width:150px">Nama Aset</th>
                         <th class="text-center" scope="col" style="width:150px">Kode Aset</th>
-                        <th class="text-center" scope="col" style="width:100px">Luas Tanah</th>
-                        <th class="text-center" class="text-center" scope="col" style="width:150px">Tahun Pengadaan</th>
-                        <th class="text-center" scope="col" style="width:150px">Penggunaan</th>
-                        <th class="text-center" scope="col" style="width: 250px">Lokasi</th>
+                        <th class="text-center" scope="col" style="width:150px">Lokasi</th>
+                        <th class="text-center" scope="col" style="width:150px">Tahun Pengadaan</th>
+                        <th class="text-center" scope="col" style="width:150px">Jumlah</th>
                         <th class="text-center" scope="col" style="width:150px">Harga</th>
+                        <th class="text-center" scope="col" style="width:250px">Gambar</th>
                         <th class="text-center" scope="col" style="width:200px">Aksi</th>
+
                       </tr>
                     </thead>
                     <tbody>
@@ -122,7 +123,7 @@
                         $i = 1;
                     @endphp
 
-                    @foreach ($kib_a as $a)
+                    @foreach ($kib_b as $a)
                       <tr>
                         <td class="text-center">
                             @php
@@ -132,28 +133,28 @@
                         </td>
                         <td>{{ $a->nama_aset }}</td>
                         <td>{{ $a->kode_aset }}</td>
-                        <td>{{ $a->luas_tanah }}</td>
-                        <td>{{ $a->tahun_pengadaan }}</td>
-                        <td>{{ $a->penggunaan }}</td>
-                        <td>{{ $a->alamat }}</td>
-                        <td>{{ $a->harga }}</td>
+                        <td>{{ $a->lokasi }}</td>
+                        <td>{{ $a->tahun }}</td>
+                        <td>{{ $a->jumlah }}</td>
+                        <td>{{ $a->hps }}</td>
+                        <td><img style="width:200px; max-height:200px" class="img-thumbnail img-fluid" src="{{ asset('storage/' . $a->gambar) }}" alt="" ></td>
+
                         <td>
                             <div class="action d-flex justify-content-center gap-2 mt-3">
                              
-                                <a href="/kib-a/more/{{ $a->id }}">
+                                <a href="/kib-b/more/{{ $a->id }}">
                                     <button type="button" class="btn btn-warning">
                                         Lihat
                                     </button>
                                 </a>
-                                
-                                <a href="/kib-a/delete/{{ $a->id }}">
+                            
+                                <a href="/kib-b/delete/{{ $a->id }}">
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                         Hapus
                                     </button>
                                 </a>
                                 
                             </div>
-                            
                         </td>
                     </tr>
                       @endforeach
