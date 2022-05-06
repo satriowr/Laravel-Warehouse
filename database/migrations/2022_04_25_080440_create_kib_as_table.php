@@ -15,18 +15,18 @@ return new class extends Migration
     {
         Schema::create('kib_as', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_aset');
-            $table->string('kode_aset');
-            $table->string('luas_tanah');
-            $table->string('tahun_pengadaan');
-            $table->string('alamat');
-            $table->string('hak');
-            $table->string('tanggal_sertifikat');
-            $table->string('nomor_sertifikat');
-            $table->string('penggunaan');
-            $table->string('asal_usul');
-            $table->string('harga');    
-            $table->string('keterangan');
+            $table->string('nama_aset')->nullable();
+            $table->string('kode_aset')->nullable();
+            $table->string('luas_tanah')->nullable();
+            $table->string('tahun_pengadaan')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('hak')->nullable();
+            $table->string('tanggal_sertifikat')->nullable();
+            $table->string('nomor_sertifikat')->nullable();
+            $table->string('penggunaan')->nullable();
+            $table->string('asal_usul')->nullable();
+            $table->string('harga')->nullable();    
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }

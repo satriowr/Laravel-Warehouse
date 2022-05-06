@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\kib_A_Controller;
 use App\Http\Controllers\kib_B_Controller;
 use App\Http\Controllers\kib_C_Controller;
+use App\Http\Controllers\kib_E_Controller;
 
 
 /*
@@ -48,3 +49,12 @@ route::get('/kib-c/delete/{id}', [kib_C_Controller::class, 'delete'])->middlewar
 Route::get('/kib-c/more/{id}', [kib_C_Controller::class, 'more'])->middleware('auth');
 route::get('/kib-c/edit/{id}', [kib_C_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-c/edit/{id}', [kib_C_Controller::class, 'update'])->middleware('auth');
+
+route::get('/kib-e', [kib_E_Controller::class, 'index'])->middleware('auth');
+route::get('/kib-e/insert', [kib_E_Controller::class, 'insert'])->middleware('auth');
+route::post('/kib-e/insert', [kib_E_Controller::class, 'store'])->middleware('auth');
+route::get('/kib-e/delete/{id}', [kib_E_Controller::class, 'delete'])->middleware('auth');
+Route::get('/kib-e/more/{id}', [kib_E_Controller::class, 'more'])->middleware('auth');
+route::get('/kib-e/edit/{id}', [kib_E_Controller::class, 'edit'])->middleware('auth');
+route::post('/kib-e/edit/{id}', [kib_E_Controller::class, 'update'])->middleware('auth');
+

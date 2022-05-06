@@ -13,24 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kib_cs', function (Blueprint $table) {
+        Schema::create('kib_es', function (Blueprint $table) {
             $table->id();
             $table->string('nama_aset')->nullable();
             $table->string('kode_aset')->nullable();
-            $table->string('kondisi')->nullable();
-            $table->string('konstruksi_bertingkat')->nullable();
-            $table->string('konstruksi_beton')->nullable();
-            $table->string('jumlah_lantai')->nullable();
-            $table->string('lokasi')->nullable();
-            $table->string('tanggal_dokumen')->nullable();
-            $table->string('nomor_dokumen')->nullable();
-            $table->string('luas_tanah')->nullable();
-            $table->string('luas_bangunan')->nullable();    
-            $table->string('status_tanah')->nullable();
-            $table->string('kode_tanah')->nullable();
+            $table->string('pengarang_buku')->nullable();
+            $table->string('penerbit_buku')->nullable();
+            $table->string('jumlah')->nullable();
+            $table->string('tahun_terbit')->nullable();
             $table->string('asal_usul')->nullable();
             $table->string('harga')->nullable();
             $table->string('keterangan')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
@@ -42,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kib_cs');
+        Schema::dropIfExists('kib_es');
     }
 };

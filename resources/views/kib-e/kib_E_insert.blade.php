@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KIB-C | Warehouse</title>
+    <title>KIB-E | Warehouse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -78,17 +78,17 @@
         </div>
         <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
         <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
-        <a class="active" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
-        <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
+        <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
+        <a class="active" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
-    <div class="content" style="height: 1000px">
+    <div class="content">
         <div class="main-content" style="margin-top:16px; margin-left:24px; margin-right:24px">
             <div class="section-satu">
-                <h3>KARTU INVENTARIS BARANG (KIB) C</h3>
+                <h3>KARTU INVENTARIS BARANG (KIB) E</h3>
             </div>
-            <form action="/kib-c/insert" method="POST">
+            <form action="/kib-e/insert" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="section-kedua">
                     <div class="d-flex flex-row justify-content-end container-section gap-3" style="margin-top:32px; border-radius:4px;">
@@ -112,88 +112,48 @@
                         </div>
         
                         <div class="mb-3">
-                            <label for="luas-aset" class="form-label">Kondisi Bangunan</label>
-                            <input type="text" name="kondisi"  class="form-control" id="luas-aset" >
+                            <label for="luas-aset" class="form-label">Pengarang Buku</label>
+                            <input type="text" name="pengarang_buku"  class="form-control" id="luas-aset" >
                         </div>
         
                         <div class="mb-3">
-                            <label for="tahun_pengadaan" class="form-label">Konstruksi Bertingkat</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="konstruksi_bertingkat">
-                                <option selected>Pilih Opsi</option>
-                                <option name="konstruksi_bertingkat" value="Ya">Ya</option>
-                                <option name="konstruksi_bertingkat" value="Tidak">Tidak</option>
-                            </select>
+                            <label for="lokasi" class="form-label">Penerbit Buku</label>
+                            <input type="text" name="penerbit_buku"  class="form-control" id="lokasi" >
                         </div>
         
                         <div class="mb-3">
-                            <label for="tahun_pengadaan" class="form-label">Konstruksi Beton</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="konstruksi_beton">
-                                <option selected>Pilih Opsi</option>
-                                <option name="konstruksi_beton" value="Ya">Ya</option>
-                                <option name="konstruksi_beton" value="Tidak">Tidak</option>
-                            </select>
+                            <label for="alamat" class="form-label">Jumlah</label>
+                            <input type="number" name="jumlah"  class="form-control" id="tahun_pengadaan">
                         </div>
         
                         <div class="mb-3">
-                            <label for="hak" class="form-label">Jumlah Lantai</label>
-                            <input type="number" name="jumlah_lantai"  class="form-control" id="hak" >
+                            <label for="hak" class="form-label">Tahun Terbit</label>
+                            <input type="number" name="tahun_terbit"  class="form-control" id="hak" >
                         </div>
 
-                        <div class="mb-3">
-                            <label for="alamat" class="form-label">Lokasi</label>
-                            <textarea type="text" name="lokasi"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="tanggal_sertifikat" class="form-label">Tanggal Dokumen</label>
-                            <input type="date" name="tanggal_dokumen"  class="form-control" id="hak" >
-                        </div>
- 
-                        
                     </div>
-
         
                     <div class="show-data2" style="width:35%">
-                       
                         <div class="mb-3">
-                            <label for="nomor_sertifikat" class="form-label">Nomor Dokumen</label>
-                            <input type="text" name="nomor_dokumen"  class="form-control" id="hak" >
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="penggunaan" class="form-label">Luas Tanah</label>
-                            <input type="number" name="luas_tanah"  class="form-control" id="hak" >
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="asal_usul" class="form-label">Luas Bangunan</label>
-                            <input type="number" name="luas_bangunan"  class="form-control" id="hak" >
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="harga" class="form-label">Status Tanah</label>
-                            <input type="text" name="status_tanah"  class="form-control" id="hak" >
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="harga" class="form-label">Kode Tanah</label>
-                            <input type="text" name="kode_tanah"  class="form-control" id="hak" >
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="harga" class="form-label">Asal-Usul</label>
+                            <label for="tanggal_sertifikat" class="form-label">Asal-usul</label>
                             <input type="text" name="asal_usul"  class="form-control" id="hak" >
                         </div>
 
                         <div class="mb-3">
-                            <label for="harga" class="form-label">Harga</label>
+                            <label for="tanggal_sertifikat" class="form-label">Harga</label>
                             <input type="number" name="harga"  class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">
-                            <label for="keterangan" class="form-label">Keterangan</label>
-                            <textarea type="text" name="keterangan"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
+                            <label for="penggunaan" class="form-label">Keterangan</label>
+                            <textarea type="text" name="keterangan"  class="form-control" id="hak" ></textarea>
                         </div>
+
+                        <div class="input-group mb-3" style="margin-top:23px">
+                            <label class="input-group-text" for="inputGroupFile01">Unggah</label>
+                            <input type="file" name="gambar" class="form-control" id="inputGroupFile01">
+                        </div>
+
                     </div>
                 </div>
             </form>

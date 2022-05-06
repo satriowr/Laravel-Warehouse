@@ -61,7 +61,6 @@ class kib_B_Controller extends Controller
 
     public function update(Request $request, $id){
         
-
         if ($request->file('gambar') == null) {
             DB::table('kib_bs')->where('id', $id)->update([
                 'nama_aset' => $request->nama_aset,
@@ -94,13 +93,10 @@ class kib_B_Controller extends Controller
                 'gambar' => $request->file('gambar')->store('post-gambar'),
             ]); 
         }
-        
-
+    
         return redirect('/kib-b/more/'.$id);
         
     }  
     
-    
-
 
 }

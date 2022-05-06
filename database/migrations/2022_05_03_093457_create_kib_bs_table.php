@@ -15,20 +15,20 @@ return new class extends Migration
     {
         Schema::create('kib_bs', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_aset');
-            $table->string('kode_aset');
-            $table->string('bahan');
-            $table->string('lokasi');
-            $table->string('warna');
-            $table->string('merk');
-            $table->string('tipe');
-            $table->string('tahun');
-            $table->string('jumlah');
-            $table->string('hps');
-            $table->string('no_inventaris_lama');    
-            $table->string('keterangan');
-            $table->string('gambar');
-            $table->timestamps();
+            $table->string('nama_aset')->nullable();
+            $table->string('kode_aset')->nullable();
+            $table->string('bahan')->nullable();
+            $table->string('lokasi')->nullable();
+            $table->string('warna')->nullable();
+            $table->string('merk')->nullable();
+            $table->string('tipe')->nullable();
+            $table->string('tahun')->nullable();
+            $table->string('jumlah')->nullable();
+            $table->string('hps')->nullable();
+            $table->string('no_inventaris_lama')->nullable();    
+            $table->string('keterangan')->nullable();
+            $table->string('gambar')->nullable();
+            $table->timestamps()->nullable();
         });
     }
 
