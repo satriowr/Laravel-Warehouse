@@ -6,6 +6,7 @@ use App\Http\Controllers\kib_A_Controller;
 use App\Http\Controllers\kib_B_Controller;
 use App\Http\Controllers\kib_C_Controller;
 use App\Http\Controllers\kib_E_Controller;
+use App\Http\Controllers\registController;
 
 
 /*
@@ -58,3 +59,5 @@ Route::get('/kib-e/more/{id}', [kib_E_Controller::class, 'more'])->middleware('a
 route::get('/kib-e/edit/{id}', [kib_E_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-e/edit/{id}', [kib_E_Controller::class, 'update'])->middleware('auth');
 
+route::get('/regist', [registController::class, 'index'])->middleware('guest');
+route::post('/regist', [registController::class, 'store']);
