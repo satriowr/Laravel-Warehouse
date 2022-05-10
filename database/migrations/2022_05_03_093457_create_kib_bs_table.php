@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('no_inventaris_lama')->nullable();    
             $table->string('keterangan')->nullable();
             $table->string('gambar')->nullable();
-            $table->timestamps()->nullable();
+            $table->timestamps();
         });
     }
 
