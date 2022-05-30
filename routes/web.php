@@ -7,6 +7,7 @@ use App\Http\Controllers\kib_B_Controller;
 use App\Http\Controllers\kib_C_Controller;
 use App\Http\Controllers\kib_E_Controller;
 use App\Http\Controllers\registController;
+use App\Http\Controllers\rbi_Controller;
 
 
 /*
@@ -34,6 +35,7 @@ route::get('/kib-a/insert', [kib_A_Controller::class, 'insert'])->middleware('au
 route::post('/kib-a/insert', [kib_A_Controller::class, 'store'])->middleware('auth');
 route::get('/kib-a/edit/{id}', [kib_A_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-a/edit/{id}', [kib_A_Controller::class, 'update'])->middleware('auth');
+route::get('/kib-a/search', [kib_A_Controller::class, 'search'])->middleware('auth');
 
 route::get('/kib-b', [kib_B_Controller::class, 'index'])->middleware('auth');
 route::get('/kib-b/insert', [kib_B_Controller::class, 'insert'])->middleware('auth');
@@ -42,6 +44,7 @@ route::get('/kib-b/delete/{id}', [kib_B_Controller::class, 'delete'])->middlewar
 Route::get('/kib-b/more/{id}', [kib_B_Controller::class, 'more'])->middleware('auth');
 route::get('/kib-b/edit/{id}', [kib_B_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-b/edit/{id}', [kib_B_Controller::class, 'update'])->middleware('auth');
+route::get('/kib-b/search', [kib_B_Controller::class, 'search'])->middleware('auth');
 
 route::get('/kib-c', [kib_C_Controller::class, 'index'])->middleware('auth');
 route::get('/kib-c/insert', [kib_C_Controller::class, 'insert'])->middleware('auth');
@@ -50,6 +53,7 @@ route::get('/kib-c/delete/{id}', [kib_C_Controller::class, 'delete'])->middlewar
 Route::get('/kib-c/more/{id}', [kib_C_Controller::class, 'more'])->middleware('auth');
 route::get('/kib-c/edit/{id}', [kib_C_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-c/edit/{id}', [kib_C_Controller::class, 'update'])->middleware('auth');
+route::get('/kib-c/search', [kib_C_Controller::class, 'search'])->middleware('auth');
 
 route::get('/kib-e', [kib_E_Controller::class, 'index'])->middleware('auth');
 route::get('/kib-e/insert', [kib_E_Controller::class, 'insert'])->middleware('auth');
@@ -58,6 +62,21 @@ route::get('/kib-e/delete/{id}', [kib_E_Controller::class, 'delete'])->middlewar
 Route::get('/kib-e/more/{id}', [kib_E_Controller::class, 'more'])->middleware('auth');
 route::get('/kib-e/edit/{id}', [kib_E_Controller::class, 'edit'])->middleware('auth');
 route::post('/kib-e/edit/{id}', [kib_E_Controller::class, 'update'])->middleware('auth');
+route::get('/kib-e/search', [kib_E_Controller::class, 'search'])->middleware('auth');
 
-route::get('/regist', [registController::class, 'index'])->middleware('guest');
-route::post('/regist', [registController::class, 'store']);
+route::get('/regist', [registController::class, 'password'])->middleware('guest');
+route::get('/registUser', [registController::class, 'index'])->middleware('guest');
+route::post('/registUser', [registController::class, 'store']);
+
+route::get('/rbi', [rbi_Controller::class, 'index'])->middleware('auth');
+route::get('/rbi/insert', [rbi_Controller::class, 'insert'])->middleware('auth');
+route::post('/rbi/insert', [rbi_Controller::class, 'store'])->middleware('auth');
+route::get('/rbi/delete/{id}', [rbi_Controller::class, 'delete'])->middleware('auth');
+Route::get('/rbi/more/{id}', [rbi_Controller::class, 'more'])->middleware('auth');
+route::get('/rbi/edit/{id}', [rbi_Controller::class, 'edit'])->middleware('auth');
+route::post('/rbi/edit/{id}', [rbi_Controller::class, 'update'])->middleware('auth');
+route::get('/rbi/search', [rbi_Controller::class, 'search'])->middleware('auth');
+
+
+
+

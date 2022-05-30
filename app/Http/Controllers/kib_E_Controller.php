@@ -18,6 +18,7 @@ class kib_E_Controller extends Controller
         return view('kib-e.kib_E_insert');
     }
 
+
     public function store(Request $request){
         //ddd($request);
         DB::table('kib_es')->insert([
@@ -47,6 +48,7 @@ class kib_E_Controller extends Controller
         $kib_e = DB::table('kib_es')->where('id', $id)->get();
         return view('kib-e.kib_E_edit', compact('kib_e'));
     }
+    
 
     public function update(Request $request, $id)
     {
@@ -79,6 +81,19 @@ class kib_E_Controller extends Controller
 
         return redirect('/kib-e/more/'.$id);
     }
+
+    public function delete($id)
+    {
+        DB::table('kib_es')->where('id', $id)->delete();
+        return redirect('/kib-e');
+    }
+
+    public function search(Request $request)
+    {
+        $kib_e = DB::table('kib_es')->where('nama_aset', 'like', '%'.$request->search.'%') ->orWhere('kode_aset', 'like', '%'.$request->search.'%')->get();
+        return view('kib-e.kib_E', compact('kib_e'));
+    }
+    
 
     
 }

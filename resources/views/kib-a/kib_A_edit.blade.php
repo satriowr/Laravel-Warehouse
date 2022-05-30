@@ -80,6 +80,7 @@
         <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
+        <a class="" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
@@ -115,10 +116,11 @@
                             <label for="kode-aset" class="form-label">Kode Aset</label>
                             <input type="text" name="kode_aset"  class="form-control" id="kode-aset" value="{{ $a->kode_aset }}">
                         </div>
-        
-                        <div class="mb-3">
-                            <label for="luas-aset" class="form-label">Luas Tanah</label>
-                            <input type="number" name="luas_tanah"  class="form-control" id="luas-aset" value="{{ $a->luas_tanah }}">
+
+                        <label for="harga" class="form-label">Luas Tanah</label><br>
+                        <div class="input-group mb-3">
+                            <input type="number" name="luas_tanah"  class="form-control" value="{{ $a->luas_tanah }}" id="luas-aset" >
+                            <span class="input-group-text" id="basic-addon1">m²</span>
                         </div>
         
                         <div class="mb-3">
@@ -157,10 +159,11 @@
                             <label for="asal_usul" class="form-label">Asal-Usul</label>
                             <input type="text" name="asal_usul"  class="form-control" id="hak" value="{{ $a->asal_usul }}">
                         </div>
-    
-                        <div class="mb-3">
-                            <label for="harga" class="form-label">Harga</label>
-                            <input type="text" name="harga"  class="form-control" id="hak" value="{{ $a->harga }}">
+
+                        <label for="harga" class="form-label">Harga</label><br>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Rp</span>
+                            <input type="text" name="harga" value="{{ $a->harga }}" class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">

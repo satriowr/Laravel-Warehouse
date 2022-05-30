@@ -80,6 +80,7 @@
         <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="active" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
+        <a class="" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
@@ -90,10 +91,13 @@
             </div>
             <div class="section-kedua">
                 <div class="d-flex flex-row justify-content-between container-section" style="margin-top:32px; border-radius:4px;">
-                    <div class="search-bar">
-                        <label class="text-muted" for="search">Search Data</label>
-                        <input style="margin-top:5px; width:300px" type="text" id="search" class="form-control" placeholder="Search...">
-                    </div>
+                          
+                    <form action="/kib-e/search" method="get">
+                        <div class="search-bar">
+                            <label class="text-muted" for="search">Search Data</label>
+                            <input style="margin-top:5px; width:300px" type="text" name="search" value="{{ old('search') }}" id="search" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
 
                     <div class="tambah mt-3">
                         <a href="/kib-e/insert">

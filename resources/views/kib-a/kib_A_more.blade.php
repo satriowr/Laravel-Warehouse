@@ -80,6 +80,7 @@
         <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
+        <a class="" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
@@ -120,7 +121,7 @@
     
                     <div class="mb-3">
                         <label for="luas-aset" class="form-label">Luas Tanah</label>
-                        <input type="text" name="luas_tanah" readonly class="form-control" id="luas-aset" value="{{ $a->luas_tanah }}">
+                        <input type="text" name="luas_tanah" readonly class="form-control" id="luas-aset" value="{{ $a->luas_tanah }} m²">
                     </div>
     
                     <div class="mb-3">
@@ -162,7 +163,7 @@
 
                     <div class="mb-3">
                         <label for="harga" class="form-label">Harga</label>
-                        <input type="text" name="harga" readonly class="form-control" id="hak" value="{{ $a->harga }}">
+                        <input type="text" name="harga" readonly class="form-control" id="hak" value="Rp. {{ $a->harga }}">
                     </div>
 
                     <div class="mb-3">

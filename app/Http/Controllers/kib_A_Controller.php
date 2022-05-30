@@ -69,4 +69,9 @@ class kib_A_Controller extends Controller
 
         return redirect('/kib-a/more/'.$id);
     }
+
+    public function search(Request $request){
+        $kib_a = DB::table('kib_as')->where('nama_aset', 'like', '%'.$request->search.'%') ->orWhere('kode_aset', 'like', '%'.$request->search.'%')->get();
+        return view('kib-a.kib_A', compact('kib_a'));
+    }
 }

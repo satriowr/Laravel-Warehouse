@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KIB-C | Warehouse</title>
+    <title>RBI | Jasa Sarana</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -77,22 +77,22 @@
             </div>
         </div>
         <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
-        <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
-        <a class="active" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
+        <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
+        <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
-        <a class="" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
+        <a class="active" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
     <div class="content">
         <div class="main-content" style="margin-top:16px; margin-left:24px; margin-right:24px">
             <div class="section-satu">
-                <h3>KARTU INVENTARIS BARANG (KIB) C</h3>
+                <h3>Rekapitulasi Buku Inventaris PT. Jasa Sarana</h3>
             </div>
             <div class="section-kedua">
                 <div class="d-flex flex-row justify-content-between container-section" style="margin-top:32px; border-radius:4px;">
-                    
-                    <form action="/kib-c/search" method="get">
+                          
+                    <form action="/rbi/search" method="get">
                         <div class="search-bar">
                             <label class="text-muted" for="search">Search Data</label>
                             <input style="margin-top:5px; width:300px" type="text" name="search" value="{{ old('search') }}" id="search" class="form-control" placeholder="Search...">
@@ -100,7 +100,7 @@
                     </form>
 
                     <div class="tambah mt-3">
-                        <a href="/kib-c/insert">
+                        <a href="/rbi/insert">
                             <button type="button" class="btn btn-success">Tambah Data</button>
                         </a>
                     </div>
@@ -111,11 +111,12 @@
                     <thead>
                       <tr>
                         <th class="text-center" scope="col" style="width:50px">No</th>
-                        <th class="text-center" scope="col" style="width:150px">Nama Aset</th>
-                        <th class="text-center" scope="col" style="width:150px">Kode Aset</th>
-                        <th class="text-center" scope="col" style="width:150px">Kondisi Bangunan</th>
-                        <th class="text-center" scope="col" style="width: 250px">Lokasi</th>
+                        <th class="text-center" scope="col" style="width:150px">Golongan</th>
+                        <th class="text-center" scope="col" style="width:150px">Kode Barang </th>
+                        <th class="text-center" scope="col" style="width:200px">Nama Barang</th>
+                        <th class="text-center" scope="col" style="width:150px">Jumlah</th>
                         <th class="text-center" scope="col" style="width:150px">Harga</th>
+                        <th class="text-center" scope="col" style="width:250px">Keterangan</th>
                         <th class="text-center" scope="col" style="width:200px">Aksi</th>
                       </tr>
                     </thead>
@@ -125,7 +126,7 @@
                         $i = 1;
                     @endphp
 
-                    @foreach ($kib_c as $a)
+                    @foreach ($rbi as $a)
                       <tr>
                         <td class="text-center">
                             @php
@@ -133,28 +134,28 @@
                                 $i++;
                             @endphp
                         </td>
-                        <td>{{ $a->nama_aset }}</td>
-                        <td>{{ $a->kode_aset }}</td>
-                        <td>{{ $a->kondisi }}</td>
-                        <td>{{ $a->lokasi }}</td>
-                        <td>{{ $a->harga }}</td>
+                        <td>{{ $a->golongan }}</td>
+                        <td>{{ $a->kode_bidang_barang }}</td>
+                        <td>{{ $a->nama_bidang_barang }}</td>
+                        <td>{{ $a->jumlah }}</td>
+                        <td>Rp. {{ $a->harga }}</td>
+                        <td>{{ $a->keterangan }}</td>
                         <td>
                             <div class="action d-flex justify-content-center gap-2 mt-3">
                              
-                                <a href="/kib-c/more/{{ $a->id }}">
+                                <a href="/rbi/more/{{ $a->id }}">
                                     <button type="button" class="btn btn-warning">
                                         Lihat
                                     </button>
                                 </a>
-                                
-                                <a href="/kib-c/delete/{{ $a->id }}">
+                            
+                                <a href="/rbi/delete/{{ $a->id }}">
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                         Hapus
                                     </button>
                                 </a>
                                 
                             </div>
-                            
                         </td>
                     </tr>
                       @endforeach

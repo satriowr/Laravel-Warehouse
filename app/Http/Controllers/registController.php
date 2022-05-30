@@ -25,4 +25,8 @@ class registController extends Controller
 
         return redirect('/');
     }
+
+    public function password(){
+        return view('regist.password');
+    }
 }

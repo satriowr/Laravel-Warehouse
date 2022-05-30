@@ -80,6 +80,7 @@
         <a class="active" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
+        <a class="" href="/rbi"><i class="bi bi-grid-1x2-fill"> </i> &nbsp RBI</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
 
@@ -160,11 +161,13 @@
                                 <label for="tanggal_sertifikat" class="form-label">Jumlah</label>
                                 <input type="number" name="jumlah" value="{{ $b->jumlah }}" class="form-control" id="hak" >
                             </div>
-    
-                            <div class="mb-3">
-                                <label for="nomor_sertifikat" class="form-label">HPS</label>
+
+                            <label for="nomor_sertifikat" class="form-label">Harga Perkiraan Sendiri</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Rp</span>
                                 <input type="number" name="hps" value="{{ $b->hps }}" class="form-control" id="hak" >
                             </div>
+
                             <div class="mb-3">
                                 <label for="nomor_sertifikat" class="form-label">No Inverntaris Lama</label>
                                 <input type="number" name="nomor_inventaris_lama" value="{{ $b->no_inventaris_lama }}" class="form-control" id="hak" >
