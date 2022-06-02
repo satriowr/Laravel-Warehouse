@@ -68,14 +68,7 @@ route::get('/regist', [registController::class, 'password'])->middleware('guest'
 route::get('/registUser', [registController::class, 'index'])->middleware('guest');
 route::post('/registUser', [registController::class, 'store']);
 
-route::get('/rbi', [rbi_Controller::class, 'index'])->middleware('auth');
-route::get('/rbi/insert', [rbi_Controller::class, 'insert'])->middleware('auth');
-route::post('/rbi/insert', [rbi_Controller::class, 'store'])->middleware('auth');
-route::get('/rbi/delete/{id}', [rbi_Controller::class, 'delete'])->middleware('auth');
-Route::get('/rbi/more/{id}', [rbi_Controller::class, 'more'])->middleware('auth');
-route::get('/rbi/edit/{id}', [rbi_Controller::class, 'edit'])->middleware('auth');
-route::post('/rbi/edit/{id}', [rbi_Controller::class, 'update'])->middleware('auth');
-route::get('/rbi/search', [rbi_Controller::class, 'search'])->middleware('auth');
+
 
 
 
