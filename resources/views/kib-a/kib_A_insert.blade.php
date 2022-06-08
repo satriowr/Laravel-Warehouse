@@ -104,66 +104,66 @@
                     <div class="show-data" style="width:35%; ">
                         <div class="mb-3">
                             <label for="nama-aset" class="form-label">Nama Aset</label>
-                            <input type="text" name="nama_aset"  class="form-control" id="nama-aset">
+                            <input required type="text" name="nama_aset"  class="form-control" id="nama-aset">
                         </div>
         
                         <div class="mb-3">
                             <label for="kode-aset" class="form-label">Kode Aset</label>
-                            <input type="text" name="kode_aset"  class="form-control" id="kode-aset" >
+                            <input required type="text" name="kode_aset"  class="form-control" id="kode-aset" >
                         </div>
 
                         <label for="harga" class="form-label">Luas Tanah</label><br>
                         <div class="input-group mb-3">
-                            <input type="number" name="luas_tanah"  class="form-control" id="luas-aset" >
+                            <input required type="number" name="luas_tanah"  class="form-control" id="luas-aset" >
                             <span class="input-group-text" id="basic-addon1">m²</span>
                         </div>
         
                         <div class="mb-3">
                             <label for="tahun_pengadaan" class="form-label">Tahun Pengadaan</label>
-                            <input type="number" name="tahun_pengadaan"  class="form-control" id="tahun_pengadaan" >
+                            <input required type="number" name="tahun_pengadaan"  class="form-control" id="tahun_pengadaan" >
                         </div>
         
                         <div class="mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
-                            <textarea type="text" name="alamat"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
+                            <textarea required type="text" name="alamat"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
                         </div>
         
                         <div class="mb-3">
                             <label for="hak" class="form-label">Hak</label>
-                            <input type="text" name="hak"  class="form-control" id="hak" >
+                            <input required type="text" name="hak"  class="form-control" id="hak" >
                         </div>
                     </div>
         
                     <div class="show-data2" style="width:35%">
                         <div class="mb-3">
                             <label for="tanggal_sertifikat" class="form-label">Tanggal Sertifikat</label>
-                            <input type="text" name="tanggal_sertifikat"  class="form-control" id="hak" >
+                            <input required type="date" name="tanggal_sertifikat"  class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">
                             <label for="nomor_sertifikat" class="form-label">Nomor Sertifikat</label>
-                            <input type="text" name="nomor_sertifikat"  class="form-control" id="hak" >
+                            <input required type="text" name="nomor_sertifikat"  class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">
                             <label for="penggunaan" class="form-label">Penggunaan</label>
-                            <input type="text" name="penggunaan"  class="form-control" id="hak" >
+                            <input required type="text" name="penggunaan"  class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">
                             <label for="asal_usul" class="form-label">Asal-Usul</label>
-                            <input type="text" name="asal_usul"  class="form-control" id="hak" >
+                            <input required type="text" name="asal_usul"  class="form-control" id="hak" >
                         </div>
     
                         <label for="harga" class="form-label">Harga</label><br>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">Rp</span>
-                            <input type="text" name="harga"  class="form-control" id="hak" >
+                            <input required type="number" name="harga"  class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">
                             <label for="keterangan" class="form-label">Keterangan</label>
-                            <textarea type="text" name="keterangan"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
+                            <textarea required type="text" name="keterangan"  class="form-control" id="tahun_pengadaan" style="height: 120px"></textarea>
                         </div>
                     </div>
                 </div>

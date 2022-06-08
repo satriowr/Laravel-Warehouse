@@ -10,7 +10,8 @@ class kib_E_Controller extends Controller
     public function index()
     {
         $kib_e = DB::table('kib_es')->get();
-        return view('kib-e.kib_E', compact('kib_e'));
+        $total = $kib_e->count();
+        return view('kib-e.kib_E', compact('kib_e' , 'total'));
     }
 
     public function insert()
@@ -91,7 +92,8 @@ class kib_E_Controller extends Controller
     public function search(Request $request)
     {
         $kib_e = DB::table('kib_es')->where('nama_aset', 'like', '%'.$request->search.'%') ->orWhere('kode_aset', 'like', '%'.$request->search.'%')->get();
-        return view('kib-e.kib_E', compact('kib_e'));
+        $total = $kib_e->count();
+        return view('kib-e.kib_E', compact('kib_e' , 'total'));
     }
     
 

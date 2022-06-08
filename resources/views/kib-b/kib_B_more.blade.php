@@ -160,10 +160,12 @@
                             <input type="number" name="jumlah" value="{{ $b->jumlah }}" class="form-control" id="hak" readonly>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="nomor_sertifikat" class="form-label">HPS</label>
-                            <input type="number" name="hps" value="Rp. {{ $b->hps }}" class="form-control" id="hak" readonly>
-                        </div>
+                        <label for="nomor_sertifikat" class="form-label">Harga Perkiraan Sendiri</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Rp</span>
+                                <input type="number" readonly name="hps" value="{{ $b->hps }}" class="form-control" id="hak" >
+                            </div>
+
                         <div class="mb-3">
                             <label for="nomor_sertifikat" class="form-label">No Inverntaris Lama</label>
                             <input type="number" name="nomor_inventaris_lama" value="{{ $b->no_inventaris_lama }}" class="form-control" id="hak" readonly>

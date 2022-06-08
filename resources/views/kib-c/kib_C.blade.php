@@ -106,6 +106,10 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="data">
+                <p>Jumlah Data : {{ $total }}</p>
+            </div>
             <div class="table-responsive mt-4">
                 <table class="table table-striped table-bordered table-sm" cellspacing="0" style="table-layout: fixed;">
                     <thead>
@@ -137,7 +141,7 @@
                         <td>{{ $a->kode_aset }}</td>
                         <td>{{ $a->kondisi }}</td>
                         <td>{{ $a->lokasi }}</td>
-                        <td>{{ $a->harga }}</td>
+                        <td>Rp. {{ $a->harga }}</td>
                         <td>
                             <div class="action d-flex justify-content-center gap-2 mt-3">
                              

@@ -10,7 +10,10 @@ class kib_A_Controller extends Controller
     public function index()
     {
         $kib_a = DB::table('kib_as')->get();
-        return view('kib-a.kib_A', compact('kib_a'));
+        $total = $kib_a->count();
+        return view('kib-a.kib_A', compact('kib_a', 'total'));
+
+       
     }
 
     public function more($id){
@@ -72,6 +75,7 @@ class kib_A_Controller extends Controller
 
     public function search(Request $request){
         $kib_a = DB::table('kib_as')->where('nama_aset', 'like', '%'.$request->search.'%') ->orWhere('kode_aset', 'like', '%'.$request->search.'%')->get();
-        return view('kib-a.kib_A', compact('kib_a'));
+        $total = $kib_a->count();
+        return view('kib-a.kib_A', compact('kib_a', 'total'));
     }
 }

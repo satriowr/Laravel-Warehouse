@@ -106,6 +106,10 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="data">
+                <p>Jumlah Data : {{ $total }}</p>
+            </div>
             <div class="table-responsive mt-4">
                 <table class="table table-striped table-bordered table-sm" cellspacing="0" style="table-layout: fixed;">
                     <thead>

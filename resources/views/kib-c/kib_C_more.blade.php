@@ -194,10 +194,11 @@
                         <input type="text" readonly name="asal_usul" value="{{ $b->asal_usul }}" class="form-control" id="hak" >
                     </div>
 
-                    <div class="mb-3">
-                        <label for="harga" class="form-label">Harga</label>
-                        <input type="number" readonly name="harga" value="{{ $b->harga }}" class="form-control" id="hak" >
-                    </div>
+                    <label for="nomor_sertifikat" class="form-label">Harga</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Rp</span>
+                                <input type="number" readonly name="harga" value="{{ $b->harga }}" class="form-control" id="hak" >
+                            </div>
 
                     <div class="mb-3">
                         <label for="keterangan" class="form-label">Keterangan</label>

@@ -142,7 +142,7 @@
                     <div class="show-data2" style="width:35%">
                         <div class="mb-3">
                             <label for="tanggal_sertifikat" class="form-label">Tanggal Sertifikat</label>
-                            <input type="text" name="tanggal_sertifikat"  class="form-control" id="hak" value="{{ $a->tanggal_sertifikat }}">
+                            <input type="date" name="tanggal_sertifikat"  class="form-control" id="hak" value="{{ $a->tanggal_sertifikat }}">
                         </div>
     
                         <div class="mb-3">
@@ -163,7 +163,7 @@
                         <label for="harga" class="form-label">Harga</label><br>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">Rp</span>
-                            <input type="text" name="harga" value="{{ $a->harga }}" class="form-control" id="hak" >
+                            <input type="number" name="harga" value="{{ $a->harga }}" class="form-control" id="hak" >
                         </div>
     
                         <div class="mb-3">

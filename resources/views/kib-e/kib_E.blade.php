@@ -106,6 +106,10 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="data">
+                <p>Jumlah Data : {{ $total }}</p>
+            </div>
             <div class="table-responsive mt-4">
                 <table class="table table-striped table-bordered table-sm" cellspacing="0" style="table-layout: fixed;">
                     <thead>
@@ -139,7 +143,7 @@
                         <td>{{ $a->kode_aset }}</td>
                         <td>{{ $a->asal_usul }}</td>
                         <td>{{ $a->jumlah }}</td>
-                        <td>{{ $a->harga }}</td>
+                        <td>Rp. {{ $a->harga }}</td>
                         <td><img style="width:200px; max-height:200px" class="img-thumbnail img-fluid" src="{{ asset('storage/' . $a->gambar) }}" alt="" ></td>
 
                         <td>
