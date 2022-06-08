@@ -18,6 +18,7 @@ use App\Http\Controllers\kir_Lounge_Controller;
 use App\Http\Controllers\kir_DirekturUtama_Controller;
 use App\Http\Controllers\kir_DirekturOperasional_Controller;
 use App\Http\Controllers\dashboard_Controller;
+use App\Http\Controllers\mutasiBarang_controller;
 
 
 /*
@@ -31,7 +32,9 @@ use App\Http\Controllers\dashboard_Controller;
 |
 */
 
-
+Route::get('/tracking', function () {
+    return view('tracking');
+});
 
 route::get('/', [LoginController::class, 'index'])->name("login")->middleware('guest');
 route::post('/', [LoginController::class, 'auth']);
@@ -142,6 +145,11 @@ route::post('/kir/direkturoperasional/insert', [kir_DirekturOperasional_Controll
 route::get('/kir/direkturoperasional/delete/{id}', [kir_DirekturOperasional_Controller::class, 'delete'])->middleware('auth');
 Route::get('/kir/direkturoperasional/more/{id}', [kir_DirekturOperasional_Controller::class, 'more'])->middleware('auth');
 route::get('/kir/direkturoperasional/search', [kir_DirekturOperasional_Controller::class, 'search'])->middleware('auth');
+
+route::get('/dashboard', [dashboard_Controller::class, 'index'])->middleware('auth');
+route::post('/dashboard/todo/insert', [dashboard_Controller::class, 'todoInsert'])->middleware('auth');
+route::get('/dashboard/todo/delete/{id}', [dashboard_Controller::class, 'todoDelete'])->middleware('auth');
+
 
 
 

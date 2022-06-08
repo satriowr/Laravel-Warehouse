@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KIR | Warehouse</title>
+    <title>Lacak | Warehouse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -77,13 +77,13 @@
             </div>
         </div>
         <a class="" href="/dashboard"><i class="bi bi-speedometer2"> </i> &nbsp Dashboard</a>
-        <a class="" href="/tracking"><i class="bi bi-door-open"> </i> &nbsp Tracking Asset</a>
+        <a class="active" href="/tracking"><i class="bi bi-door-open"> </i> &nbsp Tracking Asset</a>
         <br>
         <a class="" href="/kib-a"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB A</a>
         <a class="" href="/kib-b"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB B</a>
         <a class="" href="/kib-c"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB C</a>
         <a class="" href="/kib-e"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIB E</a>
-        <a class="active" href="/kir"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIR</a>
+        <a class="" href="/kir"><i class="bi bi-grid-1x2-fill"> </i> &nbsp KIR</a>
         <a class="" href="/bukuinventaris"><i class="bi bi-grid-1x2-fill"> </i> &nbsp Buku Inventaris</a>
         <a href="/logout" style="position: absolute; bottom:0; width:200px; margin-bottom:30px;"> <i class="bi bi-arrow-bar-left"></i> &nbsp Logout</a>
     </div>
@@ -91,38 +91,49 @@
     <div class="content" style="height: 800px">
         <div class="main-content" style="margin-top:16px; margin-left:24px; margin-right:24px">
             <div class="section-satu">
-                <h3>KARTU INVENTARIS RUANGAN</h3>
+                <h3>Lacak Aset</h3>
                 <br>
-                
-                <div class="select-kir d-flex flex-row justify-content-between">
-                    <div class="select-kir">
-                        <select class="form-select" aria-label="Default select example" onchange="window.location.href=this.value;">
-                            <option selected>Pilih Ruangan</option>
-                            <option value="kir/hightower">High Tower</option>
-                            <option value="kir/paseh">Paseh</option>
-                            <option value="kir/bizpark">Bizpark</option>
-                            <option value="kir/kantor2">Kantor 2</option>
-                            <option value="kir/kantortengah1">Kantor Tengah 1</option>
-                            <option value="kir/kantorpantry">Kantor Pantry</option>
-                            <option value="kir/lounge">Lounge</option>
-                            <option value="kir/direkturutama">Direktur Utama</option>
-                            <option value="kir/direkturoperasional">Direktur Operasional</option>
-                        </select>
-                    </div>
+            </div>
 
-                    <div class="tambah">
-                        <a href="javascript:void(0)">
-                            <button disabled type="button" class="btn btn-success">Tambah Data</button>
-                        </a>
-                    </div>
+            <div class="section-dua">
+                <div class="table-responsive">
+                    <table class="table table table-striped table-bordered table-sm" cellspacing="0" style="table-layout: fixed;">
+                        <thead>
+                          <tr>
+                            <th class="text-center" scope="col" style="width:150px">Nama Ruangan</th>
+                            <th class="text-center" scope="col" style="width:150px">Kode Aset</th>
+                            <th class="text-center" scope="col" style="width:150px">Nomor Aset</th>
+                            <th class="text-center" scope="col" style="width:150px">Nama Aset</th>
+                            <th class="text-center" scope="col" style="width:150px">Kondisi Aset</th>
+                            <th class="text-center" scope="col" style="width:200px">Tanggal Masuk</th>
+                            <th class="text-center" scope="col" style="width:200px">Tanggal Keluar</th>
+                            <th class="text-center" scope="col" style="width:200px">Tanggal Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                    </table>
                 </div>
+                
             </div>
-
-            <div class="d-flex justify-content-center section-dua" style="margin-top: 250px">
-                <p>tidak ada ruangan dipilih</p>
-            </div>
-            
-
         </div>
     </div>
 
