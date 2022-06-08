@@ -112,23 +112,26 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <th>1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th>Kantor Pantry</th>
+                            <td>002.01</td>
+                            <td>1</td>
+                            <td>Figura1</td>
+                            <td>Baik</td>
+                            <td>2022-06-09 15:40:22</td>
+                            <td></td>
+                            <td style="color:#064F32">Dalam Ruangan</td>
                           </tr>
                           <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            <th>Direktur Utama</th>
+                            <td>002.03</td>
+                            <td>1</td>
+                            <td>kursi</td>
+                            <td>Baik</td>
+                            <td>2022-06-09 17:40:22</td>
+                            <td></td>
+                            <td style="color:#064F32">Dalam Ruangan</td>
                           </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
+
                         </tbody>
                     </table>
                 </div>
