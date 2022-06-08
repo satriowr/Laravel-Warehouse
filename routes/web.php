@@ -17,6 +17,7 @@ use App\Http\Controllers\kir_KantorPantry_Controller;
 use App\Http\Controllers\kir_Lounge_Controller;
 use App\Http\Controllers\kir_DirekturUtama_Controller;
 use App\Http\Controllers\kir_DirekturOperasional_Controller;
+use App\Http\Controllers\dashboard_Controller;
 
 
 /*
