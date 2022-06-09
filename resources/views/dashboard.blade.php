@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard | Warehouse</title>
+    <title>Dashboard | Jasa Sarana</title>
+    <link rel="icon" href="http://www.jasa-sarana.co.id/images/agency-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -162,26 +163,40 @@
                             </button>
                         </div>
 
+                        
+                        <br>
                         <div class="d-flex flex-row gap-3">
                             <div class="content-cal">
                                 <div id='calendar' style="width: 400px;"></div>
                             </div>
 
                             <div class="todo-fix" >
-                                @foreach ($todo as $a)
-                                    <div class="content-todo mb-2" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding-left: 12px; padding-top: 6px; padding-right:12px; padding-bottom:6px; border-radius:10px; width:350px">
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <div class="fill">
-                                                <p class="">{{ $a->title }} | {{ $a->deadline }}</p>
-                                                <span>{{ $a->description }}</span>
-                                            </div>
-            
-                                            <div class="delete" style="margin-top:20px;">
-                                                <a href="/dashboard/todo/delete/{{ $a->id }}"><i class="bi bi-trash-fill" style="font-size:20px; color: red"></i></a>
+                                <?php
+                                    if ($totaltodo == 0){
+                                        ?>
+                                        <p style="margin-top: 170px; margin-left: 100px" class="text-muted">Tidak ada agenda ditemukan</p>
+                                        <?php
+                                    }
+                                    else {
+                                        ?>
+                                        @foreach ($todo as $a)
+                                        <div class="content-todo mb-2" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding-left: 12px; padding-top: 6px; padding-right:12px; padding-bottom:6px; border-radius:10px; width:350px">
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div class="fill">
+                                                    <p class="">{{ $a->title }} | {{ $a->deadline }}</p>
+                                                    <span>{{ $a->description }}</span>
+                                                </div>
+                
+                                                <div class="delete" style="margin-top:20px;">
+                                                    <a href="/dashboard/todo/delete/{{ $a->id }}"><i class="bi bi-trash-fill" style="font-size:20px; color: red"></i></a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                        @endforeach
+
+                                        <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>

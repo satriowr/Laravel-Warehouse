@@ -22,8 +22,9 @@ class dashboard_Controller extends Controller
         $totale = $kib_e->count();
 
         $todo = DB::table('todos')->get();
+        $totaltodo = $todo->count();
 
-        return view('dashboard', compact('totala', 'totalb', 'totalc', 'totale', 'todo'));
+        return view('dashboard', compact('totala', 'totalb', 'totalc', 'totale', 'todo', 'totaltodo'));
     }
 
     public function todoInsert(Request $request){

@@ -4,7 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
+    <link rel="icon" href="http://www.jasa-sarana.co.id/images/agency-logo.png">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
     <!-- Bootstrap CSS -->
@@ -13,7 +14,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Login | Warehouse</title>
+    <title>Login | Jasa Sarana</title>
   </head>
   <body>
   

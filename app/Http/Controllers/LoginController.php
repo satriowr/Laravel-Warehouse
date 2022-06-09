@@ -22,7 +22,7 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
             //dd("Successfully logged in!");
-            return redirect()->intended('/kib-a');
+            return redirect()->intended('/dashboard');
         }
 
         return back()->with('loginError', 'Login Failed');
