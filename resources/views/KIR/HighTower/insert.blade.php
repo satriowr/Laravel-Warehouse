@@ -97,20 +97,24 @@
                     <h3>TAMBAH KARTU INVENTARIS RUANGAN</h3>
                     <br>
                     
-                    <div class="select-kir d-flex flex-row justify-content-end">
-                        
+                    <div class="select-kir d-flex flex-row justify-content-between">
+                        <div class="refer">
+                            <button class="btn btn-warning" onclick="openLink();">Buka Referensi</button>
+                        </div>
     
                         <div class="tambah">
                             <button type="submit" class="btn btn-success">Tambah Data</button>
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="form-insert mt-3">
                     <div class="d-flex flex-row gap-5">
                         <div class="show-data1" style="width:35%">
                             <div class="mb-3">
                                 <label for="tanggal_sertifikat" class="form-label">Jenis Aset/Nama Aset</label>
-                                <input type="text" name="nama_aset"  class="form-control" id="hak" >
+                                <input required type="text" name="nama_aset"  class="form-control" id="hak" >
                             </div>
         
                             <div class="mb-3">
@@ -170,5 +174,10 @@
 
 </body>
 
+<script>
+    function openLink(){
+        window.open("http://127.0.0.1:8000/kib-b", "newwindow", "width=800, height=600");
+    }
+</script>
     
 </html>

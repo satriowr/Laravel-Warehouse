@@ -97,7 +97,10 @@
                     <h3>TAMBAH KARTU INVENTARIS RUANGAN</h3>
                     <br>
                     
-                    <div class="select-kir d-flex flex-row justify-content-end">
+                    <div class="select-kir d-flex flex-row justify-content-between">
+                        <div class="refer">
+                            <button class="btn btn-warning" onclick="openLink();">Buka Referensi</button>
+                        </div>
     
                         <div class="tambah">
                             <button type="submit" class="btn btn-success">Tambah Data</button>
