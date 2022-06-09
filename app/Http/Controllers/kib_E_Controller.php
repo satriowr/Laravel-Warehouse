@@ -76,8 +76,33 @@ class kib_E_Controller extends Controller
                 'harga' => $request->harga,
                 'keterangan' => $request->keterangan,
             ]); 
+
+            DB::table('buku_inventaris')->where('id', $id)->update([
+                'nama_aset' => $request->nama_aset,
+                'kode_aset' => $request->kode_aset,
+                'pengarang_buku' => $request->pengarang_buku,
+                'penerbit_buku' => $request->penerbit_buku,
+                'jumlah' => $request->jumlah,
+                'tahun_terbit' => $request->tahun_terbit,
+                'asal_usul' => $request->asal_usul,
+                'harga' => $request->harga,
+                'keterangan' => $request->keterangan,
+            ]); 
         }else{
             DB::table('kib_es')->where('id', $id)->update([
+                'nama_aset' => $request->nama_aset,
+                'kode_aset' => $request->kode_aset,
+                'pengarang_buku' => $request->pengarang_buku,
+                'penerbit_buku' => $request->penerbit_buku,
+                'jumlah' => $request->jumlah,
+                'tahun_terbit' => $request->tahun_terbit,
+                'asal_usul' => $request->asal_usul,
+                'harga' => $request->harga,
+                'keterangan' => $request->keterangan,
+                'gambar' => $request->file('gambar')->store('post-gambar'),
+            ]);
+
+            DB::table('buku_inventaris')->where('id', $id)->update([
                 'nama_aset' => $request->nama_aset,
                 'kode_aset' => $request->kode_aset,
                 'pengarang_buku' => $request->pengarang_buku,
@@ -97,6 +122,7 @@ class kib_E_Controller extends Controller
     public function delete($id)
     {
         DB::table('kib_es')->where('id', $id)->delete();
+        DB::table('buku_inventaris')->where('id', $id)->delete();
         return redirect('/kib-e');
     }
 
