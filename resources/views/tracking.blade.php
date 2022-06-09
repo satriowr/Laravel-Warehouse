@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lacak | Warehouse</title>
+    <title>Tracking | Warehouse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -95,7 +95,31 @@
                 <br>
             </div>
 
-            <div class="section-dua">
+           
+            <div class="select-kir d-flex flex-row justify-content-between">
+                <div class="select-kir">
+                    <select class="form-select" aria-label="Default select example" onchange="window.location.href=this.value;">
+                        <option selected>Pilih Ruangan</option>
+                        <option value="kir/hightower">High Tower</option>
+                        <option value="kir/paseh">Paseh</option>
+                        <option value="kir/bizpark">Bizpark</option>
+                        <option value="kir/kantor2">Kantor 2</option>
+                        <option value="kir/kantortengah1">Kantor Tengah 1</option>
+                        <option value="kir/kantorpantry">Kantor Pantry</option>
+                        <option value="kir/lounge">Lounge</option>
+                        <option value="kir/direkturutama">Direktur Utama</option>
+                        <option value="kir/direkturoperasional">Direktur Operasional</option>
+                    </select>
+                </div>
+
+                <div class="tambah">
+                    <a href="javascript:void(0)">
+                        <button disabled type="button" class="btn btn-success">Menampilkan 2 data</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-dua mt-5">
                 <div class="table-responsive">
                     <table class="table table table-striped table-bordered table-sm" cellspacing="0" style="table-layout: fixed;">
                         <thead>

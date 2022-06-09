@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_aset')->nullable();
             $table->string('kode_aset')->nullable();
+            $table->string('register')->nullable();
             $table->string('luas_tanah')->nullable();
             $table->string('tahun_pengadaan')->nullable();
             $table->string('alamat')->nullable();

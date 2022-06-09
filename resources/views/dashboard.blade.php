@@ -115,10 +115,21 @@
             
             <div class="d-flex flex-row gap-5">
                 <div class="left">
-                    <div class="content-chart" style="width: 332px; padding-left:16px; border-radius: 16px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                    <div class="content-chart" style="width: 332px; height:550px; padding-left:16px; border-radius: 16px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                         <div class="chart d-flex justify-content-center" style=" margin-right:16px">
                             <div class="canvas">
-                                <canvas id="myChart"></canvas>
+                                <?php
+                                    if ($totala == 0 and $totalb == 0 and $totalc == 0 and $totale == 0){
+                                        ?><br> <br><p class="text-muted">tidak ada data ditemukan</p>
+                                        <?php
+                                    }
+                                    else{
+                                        ?><div class="chartnya">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                        <?php
+                                    }
+                                ?>
                             </div>
                         </div>
         
@@ -153,7 +164,7 @@
 
                         <div class="d-flex flex-row gap-3">
                             <div class="content-cal">
-                                <div id='calendar' style="width: 400px"></div>
+                                <div id='calendar' style="width: 400px;"></div>
                             </div>
 
                             <div class="todo-fix" >

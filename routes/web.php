@@ -151,7 +151,8 @@ route::post('/dashboard/todo/insert', [dashboard_Controller::class, 'todoInsert'
 route::get('/dashboard/todo/delete/{id}', [dashboard_Controller::class, 'todoDelete'])->middleware('auth');
 
 Route::get('/bukuinventaris', [bukuInventaris_Controller::class, 'index'])->middleware('auth');
-
+Route::get('/bukuinventaris/search', [bukuInventaris_Controller::class, 'search'])->middleware('auth');
+Route::get('/bukuinventaris/delete/{id}', [bukuInventaris_Controller::class, 'delete'])->middleware('auth');
 
 
 

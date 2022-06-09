@@ -41,6 +41,25 @@ class kib_C_Controller extends Controller
 
         ]);
 
+        DB::table('buku_inventaris')->insert([
+            'nama_aset' => $request->nama_aset,
+            'kode_aset' => $request->kode_aset,
+            'kondisi' => $request->kondisi,
+            'konstruksi_bertingkat' => $request->konstruksi_bertingkat,
+            'konstruksi_beton' => $request->konstruksi_beton,
+            'jumlah_lantai' => $request->jumlah_lantai,
+            'lokasi' => $request->lokasi,
+            'tanggal_dokumen' => $request->tanggal_dokumen,
+            'nomor_dokumen' => $request->nomor_dokumen,
+            'luas_tanah' => $request->luas_tanah,
+            'luas_bangunan' => $request->luas_bangunan,
+            'status_tanah' => $request->status_tanah,
+            'kode_tanah' => $request->kode_tanah,
+            'asal_usul' => $request->asal_usul,
+            'harga' => $request->harga,
+            'keterangan' => $request->keterangan,
+        ]);
+
         return redirect('/kib-c');
     }
 

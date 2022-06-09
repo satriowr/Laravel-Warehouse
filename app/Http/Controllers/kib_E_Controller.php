@@ -19,10 +19,22 @@ class kib_E_Controller extends Controller
         return view('kib-e.kib_E_insert');
     }
 
-
     public function store(Request $request){
         //ddd($request);
         DB::table('kib_es')->insert([
+            'nama_aset' => $request->nama_aset,
+            'kode_aset' => $request->kode_aset,
+            'pengarang_buku' => $request->pengarang_buku,
+            'penerbit_buku' => $request->penerbit_buku,
+            'jumlah' => $request->jumlah,
+            'tahun_terbit' => $request->tahun_terbit,
+            'asal_usul' => $request->asal_usul,
+            'harga' => $request->harga,
+            'keterangan' => $request->keterangan,
+            'gambar' => $request->file('gambar')->store('post-gambar'),
+        ]);
+
+        DB::table('buku_inventaris')->insert([
             'nama_aset' => $request->nama_aset,
             'kode_aset' => $request->kode_aset,
             'pengarang_buku' => $request->pengarang_buku,
@@ -50,7 +62,6 @@ class kib_E_Controller extends Controller
         return view('kib-e.kib_E_edit', compact('kib_e'));
     }
     
-
     public function update(Request $request, $id)
     {
         if ($request->file('gambar') == null) {
@@ -96,6 +107,5 @@ class kib_E_Controller extends Controller
         return view('kib-e.kib_E', compact('kib_e' , 'total'));
     }
     
-
-    
+ 
 }
