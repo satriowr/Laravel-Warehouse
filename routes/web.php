@@ -18,7 +18,7 @@ use App\Http\Controllers\kir_Lounge_Controller;
 use App\Http\Controllers\kir_DirekturUtama_Controller;
 use App\Http\Controllers\kir_DirekturOperasional_Controller;
 use App\Http\Controllers\dashboard_Controller;
-use App\Http\Controllers\mutasiBarang_controller;
+use App\Http\Controllers\bukuInventaris_Controller;
 
 
 /*
@@ -149,6 +149,8 @@ route::get('/kir/direkturoperasional/search', [kir_DirekturOperasional_Controlle
 route::get('/dashboard', [dashboard_Controller::class, 'index'])->middleware('auth');
 route::post('/dashboard/todo/insert', [dashboard_Controller::class, 'todoInsert'])->middleware('auth');
 route::get('/dashboard/todo/delete/{id}', [dashboard_Controller::class, 'todoDelete'])->middleware('auth');
+
+Route::get('/bukuinventaris', [bukuInventaris_Controller::class, 'index'])->middleware('auth');
 
 
 
