@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="/regist" method="post">
+        <form action="/registUser" method="post">
             @csrf
             <br><br><br>
             <div class="form-group">

@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('direkturoperasionals', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_aset');
-            $table->string('kode_aset');
-            $table->string('merk');
-            $table->string('ukuran');
-            $table->string('bahan');
-            $table->string('tahun_pembelian');
-            $table->string('harga');
-            $table->string('kondisi');
+            $table->string('nama_aset')->nullable();
+            $table->string('kode_aset')->nullable();
+            $table->string('merk')->nullable();
+            $table->string('ukuran')->nullable();
+            $table->string('bahan')->nullable();
+            $table->string('tahun_pembelian')->nullable();
+            $table->string('harga')->nullable();
+            $table->string('kondisi')->nullable();
             $table->timestamps();
         });
     }
